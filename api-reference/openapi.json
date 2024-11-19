@@ -14,11 +14,6 @@
       "url": "http://localhost:3001"
     }
   ],
-  "security": [
-    {
-      "bearerAuth": []
-    }
-  ],
   "paths": {
     "/weather": {
       "get": {
