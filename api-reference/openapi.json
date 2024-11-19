@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
+      "url": "http://localhost:3001"
     }
   ],
   "security": [
@@ -21,34 +21,82 @@
   "paths": {
     "/weather": {
       "get": {
-        "description": "Retonar as informações metereologicas de uma determinada cidade.",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
+        "description": "Obter as informações meteorológicas para a localização do IP.",
         "responses": {
           "200": {
-            "description": "Plant response",
+            "description": "Clima atual para a localização do IP",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plant"
+                  "type": "object",
+                  "properties": {
+                    "temperature": {
+                      "type": "number",
+                      "description": "Temperatura atual"
+                    },
+                    "feelsLike": {
+                      "type": "number",
+                      "description": "Sensação térmica"
+                    },
+                    "tempMin": {
+                      "type": "number",
+                      "description": "Temperatura mínima"
+                    },
+                    "tempMax": {
+                      "type": "number",
+                      "description": "Temperatura máxima"
+                    },
+                    "pressure": {
+                      "type": "number",
+                      "description": "Pressão atmosférica"
+                    },
+                    "humidity": {
+                      "type": "number",
+                      "description": "Umidade do ar"
+                    },
+                    "windSpeed": {
+                      "type": "number",
+                      "description": "Velocidade do vento"
+                    },
+                    "windDeg": {
+                      "type": "number",
+                      "description": "Direção do vento"
+                    },
+                    "weather": {
+                      "type": "string",
+                      "description": "Condição climática"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "Descrição do clima"
+                    },
+                    "city": {
+                      "type": "string",
+                      "description": "Cidade"
+                    },
+                    "country": {
+                      "type": "string",
+                      "description": "País"
+                    },
+                    "sunrise": {
+                      "type": "integer",
+                      "description": "Hora do nascer do sol"
+                    },
+                    "sunset": {
+                      "type": "integer",
+                      "description": "Hora do pôr do sol"
+                    },
+                    "icon": {
+                      "type": "string",
+                      "description": "Ícone representando o clima"
+                    }
                   }
                 }
               }
             }
           },
           "400": {
-            "description": "Unexpected error",
+            "description": "Erro inesperado",
             "content": {
               "application/json": {
                 "schema": {
@@ -58,33 +106,97 @@
             }
           }
         }
-      },
-      "post": {
-        "description": "Creates a new plant in the store",
-        "requestBody": {
-          "description": "Plant to add to the store",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
+      }
+    },
+    "/weather/city/{cidade}": {
+      "get": {
+        "description": "Obter a previsão do tempo para uma cidade específica.",
+        "parameters": [
+          {
+            "name": "cidade",
+            "in": "path",
+            "required": true,
+            "description": "Nome da cidade para obter as previsões meteorológicas",
+            "schema": {
+              "type": "string"
             }
-          },
-          "required": true
-        },
+          }
+        ],
         "responses": {
           "200": {
-            "description": "plant response",
+            "description": "Clima para a cidade especificada",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Plant"
+                  "type": "object",
+                  "properties": {
+                    "temperature": {
+                      "type": "number",
+                      "description": "Temperatura atual"
+                    },
+                    "feelsLike": {
+                      "type": "number",
+                      "description": "Sensação térmica"
+                    },
+                    "tempMin": {
+                      "type": "number",
+                      "description": "Temperatura mínima"
+                    },
+                    "tempMax": {
+                      "type": "number",
+                      "description": "Temperatura máxima"
+                    },
+                    "pressure": {
+                      "type": "number",
+                      "description": "Pressão atmosférica"
+                    },
+                    "humidity": {
+                      "type": "number",
+                      "description": "Umidade do ar"
+                    },
+                    "windSpeed": {
+                      "type": "number",
+                      "description": "Velocidade do vento"
+                    },
+                    "windDeg": {
+                      "type": "number",
+                      "description": "Direção do vento"
+                    },
+                    "weather": {
+                      "type": "string",
+                      "description": "Condição climática"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "Descrição do clima"
+                    },
+                    "city": {
+                      "type": "string",
+                      "description": "Cidade"
+                    },
+                    "country": {
+                      "type": "string",
+                      "description": "País"
+                    },
+                    "sunrise": {
+                      "type": "integer",
+                      "description": "Hora do nascer do sol"
+                    },
+                    "sunset": {
+                      "type": "integer",
+                      "description": "Hora do pôr do sol"
+                    },
+                    "icon": {
+                      "type": "string",
+                      "description": "Ícone representando o clima"
+                    }
+                  }
                 }
               }
             }
           },
           "400": {
-            "description": "unexpected error",
+            "description": "Erro inesperado",
             "content": {
               "application/json": {
                 "schema": {
@@ -98,13 +210,13 @@
     },
     "/plants/{id}": {
       "delete": {
-        "description": "ApAGAR MUITAS",
+        "description": "Deleta uma planta com base no ID fornecido",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "ID of plant to delete",
             "required": true,
+            "description": "ID da planta a ser deletada",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -113,11 +225,11 @@
         ],
         "responses": {
           "204": {
-            "description": "Plant deleted",
+            "description": "Planta deletada",
             "content": {}
           },
           "400": {
-            "description": "unexpected error",
+            "description": "Erro inesperado",
             "content": {
               "application/json": {
                 "schema": {
@@ -132,42 +244,6 @@
   },
   "components": {
     "schemas": {
-      "Plant": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name of the plant",
-            "type": "string"
-          },
-          "tag": {
-            "description": "Tag to specify the type",
-            "type": "string"
-          }
-        }
-      },
-      "NewPlant": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Plant"
-          },
-          {
-            "required": [
-              "id"
-            ],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
-              }
-            }
-          }
-        ]
-      },
       "Error": {
         "required": [
           "error",
