@@ -21,7 +21,7 @@
   "paths": {
     "/weather": {
       "get": {
-        "description": "Returns all plants from the system that the user has access to",
+        "description": "Retonar as informações metereologicas de uma determinada cidade.",
         "parameters": [
           {
             "name": "limit",
