@@ -47,6 +47,7 @@
     {
       "group": "Essenciais",
       "pages": [
+        "essentials/scructure",
         "essentials/markdown",
         "essentials/code",
         "essentials/images",
