@@ -35,17 +35,12 @@
     {
       "name": "NestJS",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://nestjs.com/"
     },
     {
       "name": "NextJS",
       "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://nextjs.org/"
     }
   ],
   "navigation": [
