@@ -48,11 +48,7 @@
       "group": "Essenciais",
       "pages": [
         "essentials/structure",
-        "essentials/tech",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/reusable-snippets"
+        "essentials/tech"
       ]
     },
     {
