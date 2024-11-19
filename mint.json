@@ -33,12 +33,12 @@
   ],
   "anchors": [
     {
-      "name": "NestJS",
+      "name": "BackEnd NestJS",
       "icon": "book-open-cover",
       "url": "https://nestjs.com/"
     },
     {
-      "name": "NextJS",
+      "name": "FrontEnd NextJS",
       "icon": "slack",
       "url": "https://nextjs.org/"
     }
