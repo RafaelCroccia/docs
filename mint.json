@@ -48,11 +48,10 @@
       "group": "Essenciais",
       "pages": [
         "essentials/structure",
-        "essentials/markdown",
+        "essentials/tech",
         "essentials/code",
         "essentials/images",
         "essentials/settings",
-        "essentials/navigation",
         "essentials/reusable-snippets"
       ]
     },
