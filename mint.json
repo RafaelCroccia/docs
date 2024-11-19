@@ -22,12 +22,12 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Painel",
+    "url": "https://localhost:3000"
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "Documentação API",
       "url": "api-reference"
     }
   ],
