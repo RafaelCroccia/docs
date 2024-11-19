@@ -1,8 +1,9 @@
 {
+  "$schema": "https://mintlify.com/schema.json",
   "openapi": "3.0.1",
   "info": {
-    "title": "OpenAPI Plant Store",
-    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
+    "title": "OpenAPI Weather API",
+    "description": "A sample API to demonstrate weather information retrieval based on IP or city name.",
     "license": {
       "name": "MIT"
     },
@@ -194,39 +195,6 @@
                 }
               }
             }
-          },
-          "400": {
-            "description": "Erro inesperado",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/plants/{id}": {
-      "delete": {
-        "description": "Deleta uma planta com base no ID fornecido",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "description": "ID da planta a ser deletada",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Planta deletada",
-            "content": {}
           },
           "400": {
             "description": "Erro inesperado",
