@@ -48,12 +48,10 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Essenciais",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -64,7 +62,7 @@
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Documentação API",
       "pages": [
         "api-reference/introduction"
       ]
