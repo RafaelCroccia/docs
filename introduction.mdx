@@ -5,35 +5,21 @@ icon: "book"
 ---
 
 <Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
+**Pré-requisito**: instale o Node.js (versão 19 ou superior) antes de continuar.
 </Info>
 
-Follow these steps to install and run Mintlify on your operating system:
+### Gateaway
 
-**Step 1**: Install Mintlify:
-
-<CodeGroup>
-  ```bash npm
-  npm i -g mintlify
-  ```
-
-  ```bash yarn
-  yarn global add mintlify
-  ```
-</CodeGroup>
-
-**Step 2**: Navigate to the docs directory (where the `mint.json` file is located) and execute the following command:
+Recebe as requisições `HTTP` dos utilizadores e distribui para os microserviços correspondentes.
 
 ```bash
-mintlify dev
+ms-gateaway
 ```
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+### Weather
 
-### Custom Ports
-
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
+Consulta a API externa (OpenWeather) para obter informações meteorológicas.
 
 ```bash
-mintlify dev --port 3333
+ms-gateaway
 ```
