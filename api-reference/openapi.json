@@ -11,11 +11,11 @@
   },
   "servers": [
     {
-      "url": "https://weather.afonsoveloso.com"
+      "url": "https://weather.afonsoveloso.com/"
     }
   ],
   "paths": {
-    "/weather": {
+    "https://teste.com/weather": {
       "get": {
         "description": "Obter as informações meteorológicas para a localização do IP.",
         "responses": {
