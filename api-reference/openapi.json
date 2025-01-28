@@ -15,7 +15,7 @@
     }
   ],
   "paths": {
-    "https://teste.com/weather": {
+    "/weather": {
       "get": {
         "description": "Obter as informações meteorológicas para a localização do IP.",
         "responses": {
