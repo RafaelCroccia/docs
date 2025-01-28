@@ -29,12 +29,17 @@
     {
       "name": "BackEnd NestJS",
       "icon": "book-open-cover",
-      "url": "https://nestjs.com/"
+      "url": "https://weather.afonsoveloso.com"
     },
     {
       "name": "FrontEnd NextJS",
       "icon": "slack",
-      "url": "https://nextjs.org/"
+      "url": "https://weather-web-zeta-three.vercel.app/"
+    },
+    {
+      "name": "Documentation",
+      "icon": "slack",
+      "url": "https://cd.rafaelcroccia.com/"
     }
   ],
   "navigation": [
