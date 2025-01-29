@@ -16,7 +16,7 @@
     }
   },
   "topbarCtaButton": {
-    "name": "Painel2",
+    "name": "Painel",
     "url": "https://weather-web-zeta-three.vercel.app/"
   },
   "tabs": [
