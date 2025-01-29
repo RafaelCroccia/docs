@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3002"
+      "url": "https://weather.afonsoveloso.com"
     }
   ],
   "paths": {
