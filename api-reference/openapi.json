@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "https://weather.afonsoveloso.com/1"
+      "url": "https://weather.afonsoveloso.com/"
     }
   ],
   "paths": {
